@@ -8,11 +8,18 @@
   }
 
   &__value {
-    font-size: 48px;
+    font-size: 36px;
     color: $black;
 
     span {
       margin-left: 5px;
     }
+  }
+
+  @media (min-width: 1000px) {
+    &__value {
+      font-size: 46px;
+    }
+
   }
 }

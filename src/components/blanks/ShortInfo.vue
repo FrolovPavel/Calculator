@@ -2,8 +2,7 @@
     <div class="short-info">
         <p class="short-info__description">{{description}}</p>
         <div class="short-info__value">
-            {{value}}
-            <span v-if="moneySymbol === false">{{endValue}}</span>
+            {{value}}{{endValue}}
             <span v-if="moneySymbol">&#8381;</span>
         </div>
     </div>

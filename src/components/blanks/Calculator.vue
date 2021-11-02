@@ -3,8 +3,16 @@
         <h1 class="calculator__title">Калькулятор займа под ПТС</h1>
         <div class="calculator__wrapper">
             <div class="calculator__action">
-                <Tag text="Дифференцированный"/>
-                <Tag text="Аннуитетный"/>
+                <div class="calculator__nav">
+                    <h2 class="calculator__subtitle">
+                        Тип платежа
+                    </h2>
+                    <Toggler
+                            textOne="Дифференцированный"
+                            textTwo="Аннуитетный"
+                    />
+                </div>
+
                 <InputRange
                         label="Сумма займа"
                         :min="15000"
@@ -28,19 +36,24 @@
                 </div>
             </div>
             <div class="calculator__info">
-                <ShortInfo
-                        description="Ставка"
-                        class="calculator__rate"
-                        :value="calculatorRate"
-                        endValue="%"
+                <div class="calculator__info-wrapper">
+                    <ShortInfo
+                            description="Ставка"
+                            class="calculator__rate"
+                            :value="calculatorRate"
+                            endValue="%"
+                    />
+                    <ShortInfo
+                            description="Ежемесячный платеж"
+                            class="calculator__payment"
+                            :value="calculatorPayment"
+                            :moneySymbol="true"
+                    />
+                </div>
+                <Button
+                    class="calculator__button"
+                    text="Подать заявку"
                 />
-                <ShortInfo
-                        description="Ежемесячный платеж"
-                        class="calculator__payment"
-                        :value="calculatorPayment"
-                        :moneySymbol="true"
-                />
-                <Button text="Подать заявку"/>
                 <div class="calculator__info-footer">
                     Расчет займа предварительный
                 </div>
@@ -51,7 +64,7 @@
 
 <script>
 import Button from "../ui/Button";
-import Tag from '../ui/Tag'
+import Toggler from '../ui/Toggler'
 import InputRange from "../ui/InputRange";
 import ShortInfo from "./ShortInfo";
 
@@ -63,7 +76,7 @@ import ShortInfo from "./ShortInfo";
         }),
         components: {
             Button,
-            Tag,
+            Toggler,
             InputRange,
             ShortInfo
         },

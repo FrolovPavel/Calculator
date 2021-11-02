@@ -1,0 +1,38 @@
+.calculator {
+  border-radius: 8px;
+  box-shadow: 0 0 5px $black;
+  padding: 80px 67px;
+
+  //show
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__title {
+    font-size: 36px;
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__action {
+    width: 600px;
+    margin-right: 80px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+  }
+
+  &__action-footer,
+  &__info-footer {
+    font-size: 11px;
+    color: $gray;
+  }
+}

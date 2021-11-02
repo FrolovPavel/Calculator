@@ -1,0 +1,19 @@
+.tag {
+  display: inline-block;
+  cursor: pointer;
+  background-color: $white;
+  border: 2px solid $gray;
+  color: $black;
+  padding: 12px 16px;
+  user-select: none;
+
+  &.active {
+    border-color: $green;
+  }
+
+  &__radius {
+    //
+  }
+
+
+}

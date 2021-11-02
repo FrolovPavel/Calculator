@@ -1,0 +1,18 @@
+.short-info {
+  display: inline-block;
+
+  &__description {
+    font-size: 14px;
+    color: $gray;
+    margin-bottom: 10px;
+  }
+
+  &__value {
+    font-size: 48px;
+    color: $black;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+}

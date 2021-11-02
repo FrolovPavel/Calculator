@@ -1,0 +1,48 @@
+.input-range {
+  margin: 100px auto;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__counter,
+  &__info {
+    span {
+      margin-left: 5px;
+    }
+  }
+
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: $gray;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__slider {
+    .vue-slider-rail {
+      background-color: $gray;
+    }
+
+    .vue-slider-process {
+      background-color: $green;
+    }
+
+    .vue-slider-dot-handle {
+      background-color: $green;
+    }
+
+    .vue-slider-dot-handle-focus {
+      box-shadow: 0px 0px 1px 2px rgba(lighten($green, 5%), 0.36);
+
+    }
+  }
+}
